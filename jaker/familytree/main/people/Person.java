@@ -1,6 +1,5 @@
 package jaker.familytree.main.people;
 
-import java.awt.Dimension;
 import java.util.ArrayList;
 
 public class Person {
@@ -30,7 +29,5 @@ public class Person {
 		
 		this.father = father;
 		this.mother = mother;
-		
-		
 	}
 }
