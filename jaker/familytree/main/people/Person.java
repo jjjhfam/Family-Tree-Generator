@@ -1,29 +1,48 @@
-package jaker.familytree.main;
+package jaker.familytree.main.people;
 
-import java.awt.Dimension;
 import java.util.ArrayList;
 
 public class Person {
 	
-	private final String firstName = null;
-	private final String middleName = null;
-	private final String lastName = null;
-	private final Person father = null;
-	private final Person mother = null;
-	private final ArrayList<Person> sons = new ArrayList<Person>();
-	private final ArrayList<Person> daughters = new ArrayList<Person>();
-	
-	private Dimension area;
+	private String firstName = null;
+	private String middleName = null;
+	private String lastName = null;
+	private Male father = null;
+	private Female mother = null;
+	private Person spouse = null;
+	private ArrayList<Male> sons = new ArrayList<Male>();
+	private ArrayList<Female> daughters = new ArrayList<Female>();
 	
 	public Person() {
 		
 	}
 	
-	public Person(Person parent) {
+	public Person(Male father) {
+		this.father = father;
+	}
+	
+	public Person(Female mother) {
+		this.mother = mother;
+	}
+	
+	public Person(Male father, Female mother) {
+		this.father = father;
+		this.mother = mother;
+	}
+	
+	public void setName(String first, String last) {
 		
 	}
 	
-	public Person(Person parentOne, Person parentTwo) {
-		this();
+	public void setName(String first, String middle, String last) {
+		
+	}
+	
+	public void addSon(Male son) {
+		sons.add(son);
+	}
+	
+	public void addDaughter(Female daughter) {
+		daughters.add(daughter);
 	}
 }

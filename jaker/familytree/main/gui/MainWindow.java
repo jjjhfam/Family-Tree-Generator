@@ -1,4 +1,4 @@
-package jaker.familytree.gui;
+package jaker.familytree.main.gui;
 
 import javax.swing.JFrame;
 
