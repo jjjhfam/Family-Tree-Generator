@@ -17,32 +17,39 @@ public class Person {
 		
 	}
 	
-	public Person(Male father) {
+	public Person(final Male father) {
 		this.father = father;
 	}
 	
-	public Person(Female mother) {
+	public Person(final Female mother) {
 		this.mother = mother;
 	}
 	
-	public Person(Male father, Female mother) {
+	public Person(final Male father, final Female mother) {
 		this.father = father;
 		this.mother = mother;
 	}
 	
-	public void setName(String first, String last) {
-		
+	public void setName(final String firstName, final String lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
 	}
 	
-	public void setName(String first, String middle, String last) {
-		
+	public void setName(final String firstName, final String middleName, final String lastName) {
+		this.firstName = firstName;
+		this.middleName = middleName;
+		this.lastName = lastName;
 	}
 	
-	public void addSon(Male son) {
+	public void addSon(final Male son) {
 		sons.add(son);
 	}
 	
-	public void addDaughter(Female daughter) {
+	public void addDaughter(final Female daughter) {
 		daughters.add(daughter);
+	}
+	
+	public void addSpouse(final Person spouse) {
+		
 	}
 }
