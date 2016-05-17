@@ -10,37 +10,35 @@ public class Person {
 	
 	private Male father = null;
 	private Female mother = null;
-	private Person spouse = null;
 	
 	private ArrayList<Male> sons = new ArrayList<Male>();
 	private ArrayList<Female> daughters = new ArrayList<Female>();
+	private ArrayList<Person> spouses = new ArrayList<Person>();
 	
-	public Person() {
-		
-	}
+	public Person() {}
 	
-	public Person(final Male father) {
-		this.father = father;
-	}
-	
-	public Person(final Female mother) {
-		this.mother = mother;
-	}
-	
-	public Person(final Male father, final Female mother) {
-		this.father = father;
-		this.mother = mother;
-	}
-	
-	public void setName(final String firstName, final String lastName) {
+	public Person(final String firstName, final String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
 	
-	public void setName(final String firstName, final String middleName, final String lastName) {
+	public Person(final String firstName, final String middleName, final String lastName) {
 		this.firstName = firstName;
 		this.middleName = middleName;
 		this.lastName = lastName;
+	}
+	
+	public void setFather(final Male father) {
+		this.father = father;
+	}
+	
+	public void setMother(final Female mother) {
+		this.mother = mother;
+	}
+	
+	public void setParents(final Male father, final Female mother) {
+		setFather(father);
+		setMother(mother);
 	}
 	
 	public void addSon(final Male son) {
@@ -52,6 +50,6 @@ public class Person {
 	}
 	
 	public void addSpouse(final Person spouse) {
-		
+		this.spouses.add(spouse);
 	}
 }
