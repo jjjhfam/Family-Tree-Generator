@@ -1,5 +1,9 @@
 package jaker.familytree.main;
 
-public class Main {
+import jaker.familytree.util.PersonJSON;
 
+public class Main {
+	public static void main(String[] args) {
+		PersonJSON.prepareFilesystem();
+	}
 }
